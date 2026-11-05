@@ -16,3 +16,10 @@
 #     shield: halcyon_kyria_right mod_battery_coincell mod_encoder_right
 #
 ---
+include:
+  - board: halcyon_wireless//zmk
+    shield: halcyon_kyria_left mod_battery_lipo mod_cirque_central_hw mod_display_epaper_cityscape
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_STUDIO=y
+    snippet: studio-rpc-usb-uart
+  - board: halcyon_wireless//zmk
+    shield: halcyon_kyria_right mod_battery_lipo mod_cirque_hw_right
