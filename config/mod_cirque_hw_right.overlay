@@ -1,0 +1,15 @@
+/*
+ * Cirque gain experiment (2026-11-10): the halcyon module sets the
+ * trackpad ADC attenuation to "2x" (high gain). Log capture showed the
+ * pad intermittently loses finger detection for 1-3s at a time (events
+ * stop being generated while firmware stays healthy), so we lower the
+ * gain to Zephyr's default attenuation for more stable tracking.
+ * If the pointer gets too slow, restore speed with an input processor
+ * scaler (&zip_xy_scaler) instead of raising the gain again.
+ *
+ * Applies to any build with the mod_cirque_hw_right shield (both the
+ * normal and the debug right-half builds).
+ */
+&trackpad {
+    sensitivity = "3x";
+};
