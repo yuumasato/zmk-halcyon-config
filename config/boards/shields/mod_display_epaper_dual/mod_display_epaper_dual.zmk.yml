@@ -1,0 +1,8 @@
+file_format: "1"
+id: mod_display_epaper_dual
+name: Halcyon ePaper Display (dual battery)
+type: shield
+url: https://splitkb.com
+requires: [vik]
+features:
+  - display
